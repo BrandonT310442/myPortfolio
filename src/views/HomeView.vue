@@ -1,8 +1,11 @@
 <script setup>
+
+import Intro from '../components/Intro.vue'
 </script>
 
 <template>
-<h1>Test</h1>
-
+    <br>
+    <br>
+<Intro />
 
 </template>
