@@ -1,11 +1,12 @@
 <script setup>
-
-import Intro from '../components/Intro.vue'
+import Intro from '../components/Intro.vue';
+import Skills from '../components/Skills.vue';
+import Projects from '../components/Projects.vue'
 </script>
-
 <template>
-    <br>
-    <br>
-<Intro />
+    <Intro />
+
+    <Skills />
+    <Projects />
 
 </template>

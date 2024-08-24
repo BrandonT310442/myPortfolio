@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Force light mode */
+html {
+  background-color: #fff !important; /* Background color for light mode */
+}
+
+body {
+  color: #000; /* Text color for light mode */
+}
+
+/* If you're using Bulma, override the variables */
+:root {
+  --primary: #00d1b2; /* Example of Bulma's primary color in light mode */
+  --background: #fff;
+  --text: #363636;
+}
+
+/* Override any dark mode specific styles here */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+
+  /* If Bulma or custom components have dark mode styles */
+  .navbar,
+  .hero,
+  .section,
+  .footer {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+}
+
+strong {
+  color: #000 !important; /* Ensure bolded text is black */
+}
