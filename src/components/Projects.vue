@@ -73,7 +73,6 @@
 
 
 <style scoped>
-/* Styling for the heading */
 #headingOne {
     color: #007bff;
     font-family: "Work Sans", sans-serif;
@@ -98,7 +97,6 @@
     z-index: 1.0;
 }
 
-/* Image Size */
 #vortexAI {
     margin-top: 15px;
     max-width: 100%;
@@ -106,20 +104,16 @@
     height: auto;
 }
 
-/* Body Text Styling */
 #bodyText {
     margin-top: 20px;
 }
 
-/* Tags Container Styling */
 .tags-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    /* Space between tags */
 }
 
-/* Tag Styling */
 .tag {
     background-color: white;
     color: #007bff;
@@ -140,24 +134,18 @@
     align-items: center;
 }
 
-/* Tag Hover Effect */
 .tag:hover {
     opacity: 0.5;
     transition: 0.2s ease-out;
     cursor: pointer;
 }
 
-/* SVG Icon Styling */
 .icon {
     width: 24px;
-    /* Adjust icon size */
     height: 24px;
-    /* Maintain aspect ratio */
     fill: currentColor;
-    /* Use current text color */
 }
 
-/* Media Query for screens 768px wide or below */
 @media (max-width: 768px) {
 
 

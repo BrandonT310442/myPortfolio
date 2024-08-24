@@ -1,20 +1,46 @@
 <script setup>
+import { ref, onMounted } from 'vue';
+
+const textLines = ref([
+  "Hello! 👋",
+  "I'm <b>Brandon</b>, an innovative fullstack developer",
+  "studying Computer Science at",
+  "the University of Toronto."
+]);
+
+const displayText = ref(textLines.value.map(() => ''));
+const typingSpeed = 15;
+
+const typeText = (lineIndex) => {
+  if (lineIndex >= textLines.value.length) return;
+
+  const fullText = textLines.value[lineIndex];
+  let charIndex = 0;
+
+  const interval = setInterval(() => {
+    if (charIndex < fullText.length) {
+      displayText.value[lineIndex] += fullText[charIndex];
+      charIndex++;
+    } else {
+      clearInterval(interval);
+      setTimeout(() => typeText(lineIndex + 1), 500);
+    }
+  }, typingSpeed);
+};
+
+onMounted(() => {
+  typeText(0);
+});
 </script>
 
 <template>
   <div class="intro">
-    <div id="content" class="media">
+    <div class="media">
       <div class="media-content" id="wrap-text">
-        <p class="is-size-3">Hello! 👋</p>
-        <br>
-        <p class="is-size-3">
-          I'm <strong>Brandon</strong>, an innovative fullstack developer
-          <br />
-          studying Computer Science at
-          <br>
-          the University of Toronto.
-        </p>
-
+        <p class="is-size-3" v-html="displayText[0]"></p>
+        <p class="is-size-3" v-html="displayText[1]"></p>
+        <p class="is-size-3" v-html="displayText[2]"></p>
+        <p class="is-size-3" v-html="displayText[3]"></p>
       </div>
 
       <div class="media-right">
@@ -24,13 +50,10 @@
   </div>
 </template>
 
-
-
 <style scoped>
 .intro {
   height: 105vh;
   margin-top: 100px;
-  /* Any other styles you need */
 }
 
 #wrap-text {
@@ -47,6 +70,5 @@
   position: absolute;
   right: -105px;
   z-index: 1;
-
 }
 </style>
