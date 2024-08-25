@@ -3,13 +3,15 @@ import Intro from '../components/Intro.vue';
 import Skills from '../components/Skills.vue';
 import Projects from '../components/Projects.vue';
 import OtherProjects from '@/components/OtherProjects.vue';
+import Experience from '@/components/Experience.vue';
 </script>
 
 <template>
     <Intro class="fade-in" />
     <Skills class="fade-in" />
     <Projects class="fade-in" />
-    <OtherProjects class="fade-in" />>
+    <OtherProjects class="fade-in" />
+    <Experience class="fade-in" />>
 </template>
 
 <style scoped>
