@@ -149,7 +149,7 @@
 
             <!-- Text Section -->
             <div id="leftC" class="column">
-                <p id="headingTwo" class="is-size-5">NBA SPORTS STATS PROJECT</p>
+                <p id="headingTwo" class="is-size-5">NBA SPORTS STATS</p>
 
                 <p id="bodyText">NBA web application that stored and retrieved live NBA stats. Includes NBA News via the
                     RSS imageboard. Statistics were updated
