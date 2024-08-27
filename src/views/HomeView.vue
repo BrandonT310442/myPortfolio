@@ -65,6 +65,14 @@ const scrollToSection = (sectionId, offset) => {
     <section id="other-projects">
         <OtherProjects class="fade-in" />
     </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                Built and designed by <strong>Brandon Tai</strong>
+            </p>
+        </div>
+    </footer>
 </template>
 
 
