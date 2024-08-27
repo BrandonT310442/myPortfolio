@@ -71,4 +71,11 @@ onMounted(() => {
   right: -105px;
   z-index: 1;
 }
+
+@media screen and (max-width: 1024px) {
+
+  #emoji {
+    display: none;
+  }
+}
 </style>
