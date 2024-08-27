@@ -5,6 +5,7 @@
                 <p id="headingOne" class="is-size-4">
                     EXPERIENCE
                 </p>
+                <br>
             </div>
             <div class="experience-container">
                 <div class="experience-list">
@@ -31,9 +32,10 @@ export default {
         return {
             activeDetail: 1, // Set default to show Job 1's description
             experienceItems: [
-                { title: 'Job Title 1', description: 'Detailed description of what you did here1.' },
-                { title: 'Job Title 2', description: 'Detailed description of what you did here2.' },
-                { title: 'Job Title 3', description: 'Detailed description of what you did here3.' }
+                { title: 'Supply Chain Management Intern', description: "Helped create and analyze BOM's with Microsoft Excel, streamlining data management and improving procurement efficiency. Performed routine warehouse inventory audits to ensure accurate purchasing from each supplier, optimizing parts procurement and minimizing excess stock. Gained hands-on experience with circuit boards and engineering drawings, actively contributing to tasks in the server room." },
+                { title: 'Lead Software Developer, FIRST Robotics Competition Team 7558', description: 'Helped train over 30 team members for effective match scouting. Developed a scouting app using the MEVN stack for effective game analysis for alliance selection. Achieved over a 72% win rate and First Place in the Galileo Division at the FRC World Championships.' },
+
+                { title: 'Head of Media on Student Executive Council ', description: 'Responsible for full-year assembly video production for assemblies and entertainment, along with photography at events that were led by the Student Council. Managed events such as Semi-Formal Dance and Spirit Days.' },
             ]
         };
     },
@@ -53,7 +55,6 @@ export default {
     letter-spacing: .2rem;
     text-decoration: underline;
     text-underline-offset: 10px;
-
 }
 
 .experience-section {
@@ -65,22 +66,28 @@ export default {
 }
 
 .experience-list {
-    width: 30%;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    color: #007bff;
+    width: 40%;
     background-color: #fff;
     padding: 10px;
     border-right: 2px solid #ddd;
+    text-transform: uppercase;
 }
 
 .experience-item {
     padding: 10px;
     cursor: pointer;
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s;
+    border-bottom: 1px solid hsl(0, 0%, 87%);
+    transition: 0.2s ease-in;
 }
 
 .experience-item:hover {
-    background-color: #007bff;
-    color: #fff;
+    opacity: 0.5;
+    transition: 0.2s ease-out;
+    text-underline-offset: 10px;
 }
 
 .experience-detail {
@@ -90,13 +97,32 @@ export default {
 }
 
 .detail-content {
-    display: none;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
 }
 
 .detail-content.active {
-    display: block;
+    opacity: 1;
+    max-height: 1000px;
+    /* Arbitrary large value to accommodate content */
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s, max-height 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+    max-height: 0;
+}
+
+.title {
+    color: #007bff;
+    text-transform: uppercase;
+    font-weight: normal
 }
 </style>

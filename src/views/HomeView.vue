@@ -9,9 +9,10 @@ import Experience from '@/components/Experience.vue';
 <template>
     <Intro class="fade-in" />
     <Skills class="fade-in" />
+    <Experience class="fade-in" />>
+
     <Projects class="fade-in" />
     <OtherProjects class="fade-in" />
-    <Experience class="fade-in" />>
 </template>
 
 <style scoped>
