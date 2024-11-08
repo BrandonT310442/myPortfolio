@@ -4,7 +4,7 @@ import Skills from '../components/Skills.vue';
 import Projects from '../components/Projects.vue';
 import OtherProjects from '@/components/OtherProjects.vue';
 import Experience from '@/components/Experience.vue';
-// test commit
+// test 
 import { ref } from 'vue';
 
 const isActive = ref(false);
